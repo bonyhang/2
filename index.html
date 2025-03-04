@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script defer src="assets/script.js"></script>
+    <title>15 Amazing Animals You Would Love to Have</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-<!-- Anchor Ad (Closable) -->
-<div id="anchorAd" class="anchor-ad">
-    <button class="close-ad" onclick="closeAd('anchorAd')">✖</button>
-    <iframe src="ads/anchor-ad.html"></iframe>
-</div>
+    <!-- Anchor Ad (Closable) -->
+    <div id="anchorAd" class="anchor-ad">
+        <button class="close-ad" onclick="closeAd('anchorAd')">✖</button>
+        <iframe src="ads/anchor-ad.html"></iframe>
+    </div>
 
-<header>
-    <h1>My Blog</h1>
-</header>
+    <header>
+        <h1>15 Amazing Animals You Would Love to Have</h1>
+        <p class="meta">March 4, 2025 - by <span class="author">Sam Tery</span> - <a href="#">Leave a Comment</a></p>
+    </header>
 
-<main class="container">
-    <!-- Before Post Ad -->
-    <div class="ad-container"><iframe src="ads/before-post-ad.html"></iframe></div>
+    <main>
+        <!-- Before Post Ad -->
+        <div class="ad-container"><iframe src="ads/before-post-ad.html"></iframe></div>
 
-    <article>
-        <h2>Sample Blog Post</h2>
-        <p class="meta">Published on March 4, 2025</p>
+        <img class="main-image" src="hedgehog.jpg" alt="Cute Hedgehog">
 
         <!-- Before Content Ad -->
         <div class="ad-container"><iframe src="ads/before-content-ad.html"></iframe></div>
 
-        <p>First paragraph of content...</p>
+        <p>As household animals, people around the world raise incredible creatures other than cats and dogs...</p>
 
         <!-- Before Paragraph Ad -->
         <div class="ad-container"><iframe src="ads/before-paragraph-ad.html"></iframe></div>
 
-        <p>More blog content...</p>
+        <p>Wonderace made a list of strange and cute pets that are very different from the norm...</p>
 
         <!-- After Paragraph Ad -->
         <div class="ad-container"><iframe src="ads/after-paragraph-ad.html"></iframe></div>
 
-        <h3>Embedded Video</h3>
+        <h2>#1 Blue Glaucus</h2>
+        <img class="animal-image" src="blue-glaucus.jpg" alt="Blue Glaucus">
 
         <!-- Before Video Ad -->
         <div class="ad-container"><iframe src="ads/before-video-ad.html"></iframe></div>
 
+        <!-- Video Player -->
         <div class="video-container">
             <video id="customVideo" controls>
                 <source src="videos/sample-video.mp4" type="video/mp4">
@@ -57,19 +58,18 @@
 
         <!-- After Post Ad (Native Ad) -->
         <div class="ad-container"><iframe src="ads/after-post-native-ad.html"></iframe></div>
-    </article>
 
-    <h3>Recommended Posts</h3>
-    <div class="carousel">
-        <div class="carousel-inner"></div>
+        <h3>Recommended Posts</h3>
+        <div class="carousel">
+            <div class="carousel-inner"></div>
+        </div>
+    </main>
+
+    <!-- Sticky Bottom Ad (Closable) -->
+    <div id="stickyBottomAd" class="sticky-bottom-ad">
+        <button class="close-ad" onclick="closeAd('stickyBottomAd')">✖</button>
+        <iframe src="ads/sticky-bottom-ad.html"></iframe>
     </div>
-</main>
-
-<!-- Sticky Bottom Ad (Closable) -->
-<div id="stickyBottomAd" class="sticky-bottom-ad">
-    <button class="close-ad" onclick="closeAd('stickyBottomAd')">✖</button>
-    <iframe src="ads/sticky-bottom-ad.html"></iframe>
-</div>
 
 </body>
 </html>
