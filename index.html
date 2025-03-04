@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/script.js"></script>
+</head>
+<body>
+
+<!-- Anchor Ad (Closable) -->
+<div id="anchorAd" class="anchor-ad">
+    <button class="close-ad" onclick="closeAd('anchorAd')">✖</button>
+    <iframe src="ads/anchor-ad.html"></iframe>
+</div>
+
+<header>
+    <h1>My Blog</h1>
+</header>
+
+<main class="container">
+    <!-- Before Post Ad -->
+    <div class="ad-container"><iframe src="ads/before-post-ad.html"></iframe></div>
+
+    <article>
+        <h2>Sample Blog Post</h2>
+        <p class="meta">Published on March 4, 2025</p>
+
+        <!-- Before Content Ad -->
+        <div class="ad-container"><iframe src="ads/before-content-ad.html"></iframe></div>
+
+        <p>First paragraph of content...</p>
+
+        <!-- Before Paragraph Ad -->
+        <div class="ad-container"><iframe src="ads/before-paragraph-ad.html"></iframe></div>
+
+        <p>More blog content...</p>
+
+        <!-- After Paragraph Ad -->
+        <div class="ad-container"><iframe src="ads/after-paragraph-ad.html"></iframe></div>
+
+        <h3>Embedded Video</h3>
+
+        <!-- Before Video Ad -->
+        <div class="ad-container"><iframe src="ads/before-video-ad.html"></iframe></div>
+
+        <div class="video-container">
+            <video id="customVideo" controls>
+                <source src="https://raw.githubusercontent.com/yourusername/videos/main/sample-video.mp4" type="video/mp4">
+            </video>
+            <div id="overlayAd" class="overlay-ad">
+                <iframe src="ads/after-video-ad.html"></iframe>
+                <button id="skipAd">Skip Ad</button>
+            </div>
+        </div>
+
+        <!-- After Post Ad (Native Ad) -->
+        <div class="ad-container"><iframe src="ads/after-post-native-ad.html"></iframe></div>
+    </article>
+
+    <h3>Recommended Posts</h3>
+    <div class="carousel">
+        <!-- 20 Auto-Loaded Posts -->
+        <div class="carousel-inner">
+            <!-- JavaScript will populate this section dynamically -->
+        </div>
+    </div>
+</main>
+
+<!-- Sticky Bottom Ad (Closable) -->
+<div id="stickyBottomAd" class="sticky-bottom-ad">
+    <button class="close-ad" onclick="closeAd('stickyBottomAd')">✖</button>
+    <iframe src="ads/sticky-bottom-ad.html"></iframe>
+</div>
+
+</body>
+</html>
