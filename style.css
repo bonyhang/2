@@ -4,6 +4,10 @@ body {
     padding: 0;
     background: #f4f4f4;
 }
+header {
+    text-align: center;
+    padding: 20px;
+}
 .container {
     width: 90%;
     max-width: 800px;
