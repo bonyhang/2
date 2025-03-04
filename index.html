@@ -3,73 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>15 Amazing Animals You Would Love to Have</title>
+    <title>Responsive Blog with Ads</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- Anchor Ad (Closable) -->
-    <div id="anchorAd" class="anchor-ad">
-        <button class="close-ad" onclick="closeAd('anchorAd')">✖</button>
-        <iframe src="ads/anchor-ad.html"></iframe>
+    <!-- Anchor Ad (Top, Closable) -->
+    <div id="anchor-ad">
+        <span class="close-ad" onclick="document.getElementById('anchor-ad').style.display='none'">✖</span>
+        <p>Anchor Ad - Your Ad Here</p>
     </div>
 
-    <header>
-        <h1>15 Amazing Animals You Would Love to Have</h1>
-        <p class="meta">March 4, 2025 - by <span class="author">Sam Tery</span> - <a href="#">Leave a Comment</a></p>
-    </header>
-
-    <main>
-        <!-- Before Post Ad -->
-        <div class="ad-container"><iframe src="ads/before-post-ad.html"></iframe></div>
-
-        <img class="main-image" src="hedgehog.jpg" alt="Cute Hedgehog">
+    <div class="container">
+        <header>
+            <h1>My Blog Post</h1>
+        </header>
 
         <!-- Before Content Ad -->
-        <div class="ad-container"><iframe src="ads/before-content-ad.html"></iframe></div>
+        <div class="ad">Ad Before Content</div>
 
-        <p>As household animals, people around the world raise incredible creatures other than cats and dogs...</p>
+        <article>
+            <h2>Article Title</h2>
 
-        <!-- Before Paragraph Ad -->
-        <div class="ad-container"><iframe src="ads/before-paragraph-ad.html"></iframe></div>
+            <p>Welcome to this blog post. Here’s the introduction...</p>
 
-        <p>Wonderace made a list of strange and cute pets that are very different from the norm...</p>
+            <!-- Ad After First Paragraph -->
+            <div class="ad">Ad After Paragraph</div>
 
-        <!-- After Paragraph Ad -->
-        <div class="ad-container"><iframe src="ads/after-paragraph-ad.html"></iframe></div>
+            <p>More content continues here...</p>
 
-        <h2>#1 Blue Glaucus</h2>
-        <img class="animal-image" src="blue-glaucus.jpg" alt="Blue Glaucus">
-
-        <!-- Before Video Ad -->
-        <div class="ad-container"><iframe src="ads/before-video-ad.html"></iframe></div>
-
-        <!-- Video Player -->
-        <div class="video-container">
-            <video id="customVideo" controls>
-                <source src="videos/sample-video.mp4" type="video/mp4">
-            </video>
-            <div id="overlayAd" class="overlay-ad">
-                <iframe src="ads/after-video-ad.html"></iframe>
-                <button id="skipAd">Skip Ad</button>
+            <!-- Video Section -->
+            <div class="video-container">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Ad Below Video -->
+                <div class="ad">Ad Below Video</div>
             </div>
+
+            <p>More blog content after the video...</p>
+        </article>
+
+        <!-- Native Ad After Content -->
+        <div class="native-ad">
+            <p>Sponsored Content</p>
         </div>
-
-        <!-- After Post Ad (Native Ad) -->
-        <div class="ad-container"><iframe src="ads/after-post-native-ad.html"></iframe></div>
-
-        <h3>Recommended Posts</h3>
-        <div class="carousel">
-            <div class="carousel-inner"></div>
-        </div>
-    </main>
-
-    <!-- Sticky Bottom Ad (Closable) -->
-    <div id="stickyBottomAd" class="sticky-bottom-ad">
-        <button class="close-ad" onclick="closeAd('stickyBottomAd')">✖</button>
-        <iframe src="ads/sticky-bottom-ad.html"></iframe>
     </div>
+
+    <script>
+        // Close anchor ad
+        document.querySelector(".close-ad").addEventListener("click", function() {
+            document.getElementById("anchor-ad").style.display = "none";
+        });
+    </script>
 
 </body>
 </html>
