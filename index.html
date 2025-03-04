@@ -8,22 +8,10 @@
 </head>
 <body>
 
-    <!-- Anchor Ad (Top, Closable) -->
-    <div id="anchor-ad">
-        <span class="close-ad" onclick="document.getElementById('anchor-ad').style.display='none'">✖</span>
-        <p>Anchor Ad - Your Ad Here</p>
-
-        <script type="text/javascript">
-	atOptions = {
-		'key' : '3dfb1b3c9263bd560e0d614265e2daf6',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//sparrowaboveaveragedefence.com/3dfb1b3c9263bd560e0d614265e2daf6/invoke.js"></script>
-        
+    <!-- Sticky Anchor Ad (Top, Centered, Closable) -->
+    <div id="sticky-ad">
+        <span class="close-ad" onclick="document.getElementById('sticky-ad').style.display='none'">✖</span>
+        <p>Sticky Top Ad - Your Ad Here</p>
     </div>
 
     <div class="container">
@@ -60,17 +48,13 @@
         <!-- Native Ad After Content -->
         <div class="native-ad">
             <p>Sponsored Content</p>
-
-		<script async="async" data-cfasync="false" src="//sparrowaboveaveragedefence.com/d9fc05cf4c91ff1a96e92322d32a9b2d/invoke.js"></script>
-<div id="container-d9fc05cf4c91ff1a96e92322d32a9b2d"></div>
-		
         </div>
     </div>
 
     <script>
-        // Close anchor ad
+        // Close sticky top ad
         document.querySelector(".close-ad").addEventListener("click", function() {
-            document.getElementById("anchor-ad").style.display = "none";
+            document.getElementById("sticky-ad").style.display = "none";
         });
     </script>
 
