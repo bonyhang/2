@@ -10,31 +10,37 @@ body {
     background-color: #f8f9fa;
 }
 
-.container {
-    max-width: 800px;
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Anchor Ad (Fixed Top) */
-#anchor-ad {
-    position: fixed;
+/* Sticky Top Ad (Centered, Closable) */
+#sticky-ad {
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px; /* Adjust width for responsiveness */
     background: #ffcc00;
     padding: 10px;
     text-align: center;
     font-weight: bold;
     z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .close-ad {
     position: absolute;
+    top: 5px;
     right: 10px;
     cursor: pointer;
+    font-weight: bold;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Ad Placement Styling */
@@ -63,4 +69,19 @@ body {
     text-align: center;
     margin-top: 20px;
     border-top: 2px solid #ccc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #sticky-ad {
+        width: 100%;
+        left: 0;
+        transform: none;
+        border-radius: 0;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
 }
