@@ -1,75 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    box-sizing: border-box;
 }
-header {
-    text-align: center;
-    padding: 20px;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
 }
+
 .container {
-    width: 90%;
     max-width: 800px;
-    margin: auto;
-    background: #fff;
+    margin: 70px auto;
     padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-.ad-container {
-    margin: 15px 0;
-    text-align: center;
-}
-.ad-container iframe {
-    width: 100%;
-    height: 100px;
-    border: none;
-}
-.anchor-ad, .sticky-bottom-ad {
+
+/* Anchor Ad (Fixed Top) */
+#anchor-ad {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: yellow;
-    text-align: center;
+    background: #ffcc00;
     padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
 }
-.anchor-ad { top: 0; }
-.sticky-bottom-ad { bottom: 0; }
+
 .close-ad {
-    background: red;
-    color: white;
-    border: none;
     position: absolute;
     right: 10px;
-    top: 5px;
     cursor: pointer;
 }
+
+/* Ad Placement Styling */
+.ad {
+    background: #ddd;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Video Container */
 .video-container {
     position: relative;
     text-align: center;
 }
-.overlay-ad {
-    position: absolute;
-    top: 0;
+
+.video-container video {
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: none;
+    max-height: 400px;
 }
-#skipAd {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: white;
-    padding: 5px;
-}
-.carousel {
-    overflow-x: scroll;
-    white-space: nowrap;
-}
-.carousel-inner {
-    display: flex;
-}
-.carousel-item {
-    width: 45%;
-    margin: 10px;
-    display: inline-block;
+
+/* Native Ad */
+.native-ad {
+    background: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid #ccc;
 }
