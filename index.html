@@ -3,72 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Blog with Ads</title>
+    <title>Blog Post with Ads & Auto-Loading</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- Sticky Anchor Ad (Top, Centered, Closable) -->
-    <div id="sticky-ad">
-        <span class="close-ad" onclick="document.getElementById('sticky-ad').style.display='none'">✖</span>
-        <p>Sticky Top Ad - Your Ad Here</p>
-
-        <script type="text/javascript">
-	atOptions = {
-		'key' : '3dfb1b3c9263bd560e0d614265e2daf6',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//sparrowaboveaveragedefence.com/3dfb1b3c9263bd560e0d614265e2daf6/invoke.js"></script>
-        
+    <!-- 🔹 Anchor Ad (Stays at the top) -->
+    <div class="anchor-ad">
+        <img src="images/ad-banner.jpg" alt="Anchor Ad">
     </div>
 
-    <div class="container">
-        <header>
-            <h1>My Blog Post</h1>
-        </header>
+    <!-- 🔹 Header -->
+    <header>
+        <div class="container">
+            <img class="logo" src="images/logo.png" alt="Blog Logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <!-- Before Content Ad -->
-        <div class="ad">Ad Before Content</div>
+    <main class="container">
+        
+        <!-- 🔹 Fixed Ad Before Content -->
+        <div class="fixed-ad">
+            <img src="images/ad-banner.jpg" alt="Fixed Ad">
+        </div>
 
-        <article>
-            <h2>Article Title</h2>
+        <article class="blog-post">
+            <h1>How AI is Changing the World</h1>
+            <p class="meta">Published: March 4, 2025 - by <span class="author">John Doe</span></p>
 
-            <p>Welcome to this blog post. Here’s the introduction...</p>
+            <!-- 🔹 Article Image -->
+            <img class="article-image" src="images/article1.jpg" alt="AI Image">
 
-            <!-- Ad After First Paragraph -->
-            <div class="ad">Ad After Paragraph</div>
+            <p>Artificial Intelligence (AI) is transforming industries worldwide...</p>
 
-            <p>More content continues here...</p>
-
-            <!-- Video Section -->
-            <div class="video-container">
-                <video controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <!-- Ad Below Video -->
-                <div class="ad">Ad Below Video</div>
+            <!-- 🔹 Ad After First Paragraph -->
+            <div class="inline-ad">
+                <img src="images/ad-banner.jpg" alt="Ad After Paragraph">
             </div>
 
-            <p>More blog content after the video...</p>
+            <p>From self-driving cars to smart assistants, AI is revolutionizing...</p>
+
+            <!-- 🔹 Embedded Video -->
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- 🔹 Ad Below Video -->
+            <div class="video-ad">
+                <img src="images/ad-banner.jpg" alt="Ad Below Video">
+            </div>
+
+            <p>Experts predict that AI will contribute $15.7 trillion to the global economy...</p>
+
         </article>
 
-        <!-- Native Ad After Content -->
+        <!-- 🔹 Native Ad After Content -->
         <div class="native-ad">
-            <p>Sponsored Content</p>
+            <h3>Recommended for You</h3>
+            <img src="images/ad-banner.jpg" alt="Native Ad">
         </div>
-    </div>
 
-    <script>
-        // Close sticky top ad
-        document.querySelector(".close-ad").addEventListener("click", function() {
-            document.getElementById("sticky-ad").style.display = "none";
-        });
-    </script>
+        <!-- 🔹 Auto-Loading More Content -->
+        <div id="auto-load-content"></div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BlogPost. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
